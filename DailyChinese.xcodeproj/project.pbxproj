@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC0000000000000000000001 /* DailyChineseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000101 /* DailyChineseApp.swift */; };
+		DC0000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000102 /* ContentView.swift */; };
+		DC0000000000000000000003 /* ChineseWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000103 /* ChineseWord.swift */; };
+		DC0000000000000000000004 /* WordDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000104 /* WordDataset.swift */; };
+		DC0000000000000000000005 /* SharedWordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000105 /* SharedWordState.swift */; };
+		DC0000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000106 /* Assets.xcassets */; };
+		DC0000000000000000000007 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000107 /* words.json */; };
+		DC0000000000000000000008 /* DailyChineseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000108 /* DailyChineseWidget.swift */; };
+		DC0000000000000000000009 /* ChineseWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000103 /* ChineseWord.swift */; };
+		DC000000000000000000000A /* WordDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000104 /* WordDataset.swift */; };
+		DC000000000000000000000B /* SharedWordState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000105 /* SharedWordState.swift */; };
+		DC000000000000000000000C /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000107 /* words.json */; };
+		DC000000000000000000000D /* DailyChineseWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000109 /* DailyChineseWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC000000000000000000000E /* ChineseSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC000000000000000000010D /* ChineseSentence.swift */; };
+		DC000000000000000000000F /* SentenceDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC000000000000000000010E /* SentenceDataset.swift */; };
+		DC0000000000000000000010 /* SharedSentenceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC000000000000000000010F /* SharedSentenceState.swift */; };
+		DC0000000000000000000011 /* sentences.json in Resources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000110 /* sentences.json */; };
+		DC0000000000000000000012 /* ChineseSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC000000000000000000010D /* ChineseSentence.swift */; };
+		DC0000000000000000000013 /* SentenceDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC000000000000000000010E /* SentenceDataset.swift */; };
+		DC0000000000000000000014 /* SharedSentenceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC000000000000000000010F /* SharedSentenceState.swift */; };
+		DC0000000000000000000015 /* sentences.json in Resources */ = {isa = PBXBuildFile; fileRef = DC0000000000000000000110 /* sentences.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC0000000000000000000201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0000000000000000000601 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC0000000000000000000402;
+			remoteInfo = DailyChineseWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC0000000000000000000301 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DC000000000000000000000D /* DailyChineseWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DC0000000000000000000100 /* DailyChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0000000000000000000101 /* DailyChineseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChineseApp.swift; sourceTree = "<group>"; };
+		DC0000000000000000000102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DC0000000000000000000103 /* ChineseWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseWord.swift; sourceTree = "<group>"; };
+		DC0000000000000000000104 /* WordDataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDataset.swift; sourceTree = "<group>"; };
+		DC0000000000000000000105 /* SharedWordState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWordState.swift; sourceTree = "<group>"; };
+		DC0000000000000000000106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC0000000000000000000107 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		DC0000000000000000000108 /* DailyChineseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChineseWidget.swift; sourceTree = "<group>"; };
+		DC0000000000000000000109 /* DailyChineseWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyChineseWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC000000000000000000010A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC000000000000000000010B /* DailyChinese.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyChinese.entitlements; sourceTree = "<group>"; };
+		DC000000000000000000010C /* DailyChineseWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyChineseWidget.entitlements; sourceTree = "<group>"; };
+		DC000000000000000000010D /* ChineseSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseSentence.swift; sourceTree = "<group>"; };
+		DC000000000000000000010E /* SentenceDataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceDataset.swift; sourceTree = "<group>"; };
+		DC000000000000000000010F /* SharedSentenceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSentenceState.swift; sourceTree = "<group>"; };
+		DC0000000000000000000110 /* sentences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sentences.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC0000000000000000000501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC0000000000000000000502 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC0000000000000000000701 = {
+			isa = PBXGroup;
+			children = (
+				DC0000000000000000000702 /* DailyChinese */,
+				DC0000000000000000000703 /* DailyChineseWidget */,
+				DC0000000000000000000704 /* Shared */,
+				DC0000000000000000000705 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC0000000000000000000702 /* DailyChinese */ = {
+			isa = PBXGroup;
+			children = (
+				DC0000000000000000000101 /* DailyChineseApp.swift */,
+				DC0000000000000000000102 /* ContentView.swift */,
+				DC0000000000000000000106 /* Assets.xcassets */,
+				DC000000000000000000010B /* DailyChinese.entitlements */,
+			);
+			path = DailyChinese;
+			sourceTree = "<group>";
+		};
+		DC0000000000000000000703 /* DailyChineseWidget */ = {
+			isa = PBXGroup;
+			children = (
+				DC0000000000000000000108 /* DailyChineseWidget.swift */,
+				DC000000000000000000010A /* Info.plist */,
+				DC000000000000000000010C /* DailyChineseWidget.entitlements */,
+			);
+			path = DailyChineseWidget;
+			sourceTree = "<group>";
+		};
+		DC0000000000000000000704 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DC0000000000000000000103 /* ChineseWord.swift */,
+				DC0000000000000000000104 /* WordDataset.swift */,
+				DC0000000000000000000105 /* SharedWordState.swift */,
+				DC000000000000000000010D /* ChineseSentence.swift */,
+				DC000000000000000000010E /* SentenceDataset.swift */,
+				DC000000000000000000010F /* SharedSentenceState.swift */,
+				DC0000000000000000000107 /* words.json */,
+				DC0000000000000000000110 /* sentences.json */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DC0000000000000000000705 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC0000000000000000000100 /* DailyChinese.app */,
+				DC0000000000000000000109 /* DailyChineseWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC0000000000000000000401 /* DailyChinese */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC0000000000000000000902 /* Build configuration list for PBXNativeTarget "DailyChinese" */;
+			buildPhases = (
+				DC0000000000000000000801 /* Sources */,
+				DC0000000000000000000501 /* Frameworks */,
+				DC0000000000000000000802 /* Resources */,
+				DC0000000000000000000301 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC0000000000000000000202 /* PBXTargetDependency */,
+			);
+			name = DailyChinese;
+			productName = DailyChinese;
+			productReference = DC0000000000000000000100 /* DailyChinese.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC0000000000000000000402 /* DailyChineseWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC0000000000000000000903 /* Build configuration list for PBXNativeTarget "DailyChineseWidgetExtension" */;
+			buildPhases = (
+				DC0000000000000000000803 /* Sources */,
+				DC0000000000000000000502 /* Frameworks */,
+				DC0000000000000000000804 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyChineseWidgetExtension;
+			productName = DailyChineseWidgetExtension;
+			productReference = DC0000000000000000000109 /* DailyChineseWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC0000000000000000000601 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DC0000000000000000000401 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					DC0000000000000000000402 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = DC0000000000000000000901 /* Build configuration list for PBXProject "DailyChinese" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC0000000000000000000701;
+			productRefGroup = DC0000000000000000000705 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC0000000000000000000401 /* DailyChinese */,
+				DC0000000000000000000402 /* DailyChineseWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC0000000000000000000802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0000000000000000000006 /* Assets.xcassets in Resources */,
+				DC0000000000000000000007 /* words.json in Resources */,
+				DC0000000000000000000011 /* sentences.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC0000000000000000000804 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC000000000000000000000C /* words.json in Resources */,
+				DC0000000000000000000015 /* sentences.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC0000000000000000000801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0000000000000000000001 /* DailyChineseApp.swift in Sources */,
+				DC0000000000000000000002 /* ContentView.swift in Sources */,
+				DC0000000000000000000003 /* ChineseWord.swift in Sources */,
+				DC0000000000000000000004 /* WordDataset.swift in Sources */,
+				DC0000000000000000000005 /* SharedWordState.swift in Sources */,
+				DC000000000000000000000E /* ChineseSentence.swift in Sources */,
+				DC000000000000000000000F /* SentenceDataset.swift in Sources */,
+				DC0000000000000000000010 /* SharedSentenceState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC0000000000000000000803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0000000000000000000008 /* DailyChineseWidget.swift in Sources */,
+				DC0000000000000000000009 /* ChineseWord.swift in Sources */,
+				DC000000000000000000000A /* WordDataset.swift in Sources */,
+				DC000000000000000000000B /* SharedWordState.swift in Sources */,
+				DC0000000000000000000012 /* ChineseSentence.swift in Sources */,
+				DC0000000000000000000013 /* SentenceDataset.swift in Sources */,
+				DC0000000000000000000014 /* SharedSentenceState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC0000000000000000000202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC0000000000000000000402 /* DailyChineseWidgetExtension */;
+			targetProxy = DC0000000000000000000201 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DC0000000000000000000A01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC0000000000000000000A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC0000000000000000000A03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyChinese/DailyChinese.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Chinese";
+				INFOPLIST_KEY_CFBundleURLTypes = (
+					{
+						CFBundleURLName = "Daily Chinese";
+						CFBundleURLSchemes = (
+							dailychinese,
+						);
+					},
+				);
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iankorovinsky.dailychinese;
+				PRODUCT_NAME = DailyChinese;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC0000000000000000000A04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyChinese/DailyChinese.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Chinese";
+				INFOPLIST_KEY_CFBundleURLTypes = (
+					{
+						CFBundleURLName = "Daily Chinese";
+						CFBundleURLSchemes = (
+							dailychinese,
+						);
+					},
+				);
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iankorovinsky.dailychinese;
+				PRODUCT_NAME = DailyChinese;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DC0000000000000000000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyChineseWidget/DailyChineseWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DailyChineseWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Chinese";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iankorovinsky.dailychinese.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC0000000000000000000A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyChineseWidget/DailyChineseWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DailyChineseWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Chinese";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iankorovinsky.dailychinese.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC0000000000000000000901 /* Build configuration list for PBXProject "DailyChinese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC0000000000000000000A01 /* Debug */,
+				DC0000000000000000000A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC0000000000000000000902 /* Build configuration list for PBXNativeTarget "DailyChinese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC0000000000000000000A03 /* Debug */,
+				DC0000000000000000000A04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC0000000000000000000903 /* Build configuration list for PBXNativeTarget "DailyChineseWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC0000000000000000000A05 /* Debug */,
+				DC0000000000000000000A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC0000000000000000000601 /* Project object */;
+}
