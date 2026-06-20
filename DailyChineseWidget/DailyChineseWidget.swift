@@ -14,6 +14,8 @@ struct SentenceEntry: TimelineEntry {
 }
 
 struct WordProvider: TimelineProvider {
+    private let scheduledEntryCount = 12
+
     func placeholder(in context: Context) -> WordEntry {
         WordEntry(
             date: Date(),
@@ -27,8 +29,8 @@ struct WordProvider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<WordEntry>) -> Void) {
-        let entry = makeEntry()
-        completion(Timeline(entries: [entry], policy: .after(entry.nextRefreshDate)))
+        let entries = makeTimelineEntries()
+        completion(Timeline(entries: entries, policy: .atEnd))
     }
 
     private func makeEntry(now: Date = Date()) -> WordEntry {
@@ -39,9 +41,24 @@ struct WordProvider: TimelineProvider {
             nextRefreshDate: SharedWordState.nextRefreshDate(after: now)
         )
     }
+
+    private func makeTimelineEntries(startingAt startDate: Date = Date()) -> [WordEntry] {
+        var entries: [WordEntry] = []
+        var date = startDate
+
+        for _ in 0..<scheduledEntryCount {
+            let entry = makeEntry(now: date)
+            entries.append(entry)
+            date = entry.nextRefreshDate
+        }
+
+        return entries
+    }
 }
 
 struct SentenceProvider: TimelineProvider {
+    private let scheduledEntryCount = 12
+
     func placeholder(in context: Context) -> SentenceEntry {
         SentenceEntry(
             date: Date(),
@@ -62,8 +79,8 @@ struct SentenceProvider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<SentenceEntry>) -> Void) {
-        let entry = makeEntry()
-        completion(Timeline(entries: [entry], policy: .after(entry.nextRefreshDate)))
+        let entries = makeTimelineEntries()
+        completion(Timeline(entries: entries, policy: .atEnd))
     }
 
     private func makeEntry(now: Date = Date()) -> SentenceEntry {
@@ -71,8 +88,21 @@ struct SentenceProvider: TimelineProvider {
         return SentenceEntry(
             date: now,
             sentence: SharedSentenceState.currentSentence(from: sentences, now: now),
-            nextRefreshDate: SharedWordState.nextRefreshDate(after: now)
+            nextRefreshDate: SharedSentenceState.nextRefreshDate(after: now)
         )
+    }
+
+    private func makeTimelineEntries(startingAt startDate: Date = Date()) -> [SentenceEntry] {
+        var entries: [SentenceEntry] = []
+        var date = startDate
+
+        for _ in 0..<scheduledEntryCount {
+            let entry = makeEntry(now: date)
+            entries.append(entry)
+            date = entry.nextRefreshDate
+        }
+
+        return entries
     }
 }
 
@@ -113,39 +143,38 @@ struct WordWidgetView: View {
 
 struct SentenceWidgetView: View {
     let entry: SentenceEntry
-    @Environment(\.widgetFamily) private var family
 
     var body: some View {
-        VStack(spacing: family == .systemSmall ? 8 : 18) {
-            Spacer(minLength: 0)
-
-            Text(entry.sentence.simplified)
-                .font(.system(size: family == .systemSmall ? 24 : 42, weight: .semibold, design: .rounded))
-                .multilineTextAlignment(.center)
-                .lineLimit(family == .systemSmall ? 3 : 4)
-                .minimumScaleFactor(0.55)
-
-            VStack(spacing: 5) {
-                Text(entry.sentence.pinyin)
-                    .font(family == .systemSmall ? .caption : .title3)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(family == .systemSmall ? 2 : 3)
-                    .minimumScaleFactor(0.65)
-
-                Text(entry.sentence.english)
-                    .font(family == .systemSmall ? .caption2 : .body)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(family == .systemSmall ? 2 : 3)
-                    .minimumScaleFactor(0.7)
-            }
-
-            Spacer(minLength: 0)
-        }
-        .padding(family == .systemSmall ? 12 : 28)
+        mediumSentenceLayout
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .containerBackground(.background, for: .widget)
         .widgetURL(URL(string: "dailychinese://sentence/\(entry.sentence.id)"))
+    }
+
+    private var mediumSentenceLayout: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(entry.sentence.simplified)
+                .font(.system(size: 24, weight: .semibold, design: .rounded))
+                .lineLimit(1)
+                .minimumScaleFactor(0.45)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            Text(entry.sentence.pinyin)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.55)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            Text(entry.sentence.english)
+                .font(.body)
+                .multilineTextAlignment(.leading)
+                .lineLimit(1)
+                .minimumScaleFactor(0.55)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
     }
 }
 
@@ -171,7 +200,7 @@ struct DailyChineseSentenceWidget: Widget {
         }
         .configurationDisplayName("Chinese Sentence")
         .description("A refreshed Chinese sentence.")
-        .supportedFamilies([.systemSmall, .systemLarge])
+        .supportedFamilies([.systemMedium])
     }
 }
 

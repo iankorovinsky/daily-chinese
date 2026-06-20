@@ -42,17 +42,15 @@ enum SharedSentenceState {
         return Date(timeIntervalSince1970: value)
     }
 
+    static func nextRefreshDate(after date: Date = Date()) -> Date {
+        SharedWordState.nextRefreshDate(after: date)
+    }
+
     private static func currentSlot(now: Date) -> Int {
         let calendar = Calendar.current
         let startOfDay = calendar.startOfDay(for: now)
         let dayIndex = Int(floor(startOfDay.timeIntervalSince1970 / (24 * 60 * 60)))
-
-        switch SharedWordState.cadence() {
-        case .daily:
-            return dayIndex
-        case .fourHours:
-            return (dayIndex * 6) + (calendar.component(.hour, from: now) / 4)
-        }
+        return (dayIndex * 6) + (calendar.component(.hour, from: now) / 4)
     }
 
     private static func positiveModulo(_ value: Int, _ divisor: Int) -> Int {

@@ -1,6 +1,5 @@
 import AVFoundation
 import SwiftUI
-import WidgetKit
 
 private enum StudyMode: String, CaseIterable, Identifiable {
     case word
@@ -23,9 +22,6 @@ struct ContentView: View {
     @State private var mode: StudyMode = .word
     @State private var currentWord: ChineseWord
     @State private var currentSentence: ChineseSentence
-    @State private var cadence: RefreshCadence
-    @State private var lastWordRefreshDate: Date?
-    @State private var lastSentenceRefreshDate: Date?
     @State private var speechSynthesizer = AVSpeechSynthesizer()
 
     init() {
@@ -33,165 +29,131 @@ struct ContentView: View {
         let loadedSentences = SentenceDataset.load()
         _currentWord = State(initialValue: SharedWordState.currentWord(from: loadedWords))
         _currentSentence = State(initialValue: SharedSentenceState.currentSentence(from: loadedSentences))
-        _cadence = State(initialValue: SharedWordState.cadence())
-        _lastWordRefreshDate = State(initialValue: SharedWordState.lastRefreshDate())
-        _lastSentenceRefreshDate = State(initialValue: SharedSentenceState.lastRefreshDate())
     }
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 24) {
-                Picker("Study mode", selection: $mode) {
-                    ForEach(StudyMode.allCases) { mode in
-                        Text(mode.title).tag(mode)
-                    }
-                }
-                .pickerStyle(.segmented)
-
-                Spacer(minLength: 8)
-
-                if mode == .word {
-                    wordView
-                } else {
-                    sentenceView
-                }
-
-                Spacer(minLength: 8)
-
-                controlsView
-                statusView
-            }
-            .padding(24)
-            .navigationTitle("Daily Chinese")
-            .background(Color(.systemGroupedBackground))
-        }
-        .onAppear(perform: refreshFromState)
-        .onOpenURL(perform: handleWidgetURL)
-    }
-
-    private var wordView: some View {
-        VStack(spacing: 12) {
-            Text(currentWord.displayCharacter)
-                .font(.system(size: 112, weight: .semibold, design: .rounded))
-                .minimumScaleFactor(0.6)
-
-            Text(currentWord.pinyin)
-                .font(.title2)
-                .foregroundStyle(.secondary)
-
-            Text(currentWord.english)
-                .font(.title3)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-
-            playbackButton {
-                speak(currentWord.displayCharacter)
-            }
-        }
-        .frame(maxWidth: .infinity)
-    }
-
-    private var sentenceView: some View {
-        VStack(spacing: 14) {
-            Text(currentSentence.simplified)
-                .font(.system(size: 44, weight: .semibold, design: .rounded))
-                .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.55)
-
-            Text(currentSentence.pinyin)
-                .font(.title3)
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.secondary)
-
-            Text(currentSentence.english)
-                .font(.title3)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-
-            playbackButton {
-                speak(currentSentence.simplified)
-            }
-        }
-        .frame(maxWidth: .infinity)
-    }
-
-    private var controlsView: some View {
-        VStack(spacing: 16) {
-            Picker("Refresh cadence", selection: $cadence) {
-                ForEach(RefreshCadence.allCases) { cadence in
-                    Text(cadence.title).tag(cadence)
+        VStack(spacing: 24) {
+            Picker("Study mode", selection: $mode) {
+                ForEach(StudyMode.allCases) { mode in
+                    Text(mode.title).tag(mode)
                 }
             }
             .pickerStyle(.segmented)
-            .onChange(of: cadence) { _, newValue in
-                SharedWordState.setCadence(newValue)
-                refreshFromState()
-                WidgetCenter.shared.reloadAllTimelines()
+
+            Spacer(minLength: 8)
+
+            if mode == .word {
+                wordView
+            } else {
+                sentenceView
             }
+
+            Spacer(minLength: 8)
 
             Button {
                 refreshCurrentMode()
             } label: {
-                Label("Refresh \(mode.title.lowercased()) now", systemImage: "arrow.clockwise")
+                Label("Refresh", systemImage: "arrow.clockwise")
                     .font(.headline)
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
         }
+        .padding(24)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemGroupedBackground))
+        .onAppear(perform: refreshFromState)
+        .onOpenURL(perform: handleWidgetURL)
     }
 
-    private var statusView: some View {
-        VStack(spacing: 8) {
-            Text("Widgets refresh \(cadence.shortTitle). iOS may delay background updates.")
-                .font(.footnote)
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.secondary)
+    private var wordView: some View {
+        Button {
+            speak(currentWord.displayCharacter)
+        } label: {
+            studyCard {
+                VStack(spacing: 12) {
+                    Text(currentWord.displayCharacter)
+                        .font(.system(size: 112, weight: .semibold, design: .rounded))
+                        .minimumScaleFactor(0.6)
 
-            Text(statusText)
-                .font(.caption)
-                .foregroundStyle(.tertiary)
-                .multilineTextAlignment(.center)
+                    Text(currentWord.pinyin)
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+
+                    Text(currentWord.english)
+                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                }
+            }
         }
+        .buttonStyle(.plain)
+        .frame(maxWidth: .infinity)
     }
 
-    private var statusText: String {
-        let next = SharedWordState.nextRefreshDate().formatted(date: .omitted, time: .shortened)
-        let lastRefreshDate = mode == .word ? lastWordRefreshDate : lastSentenceRefreshDate
+    private var sentenceView: some View {
+        Button {
+            speak(currentSentence.simplified)
+        } label: {
+            studyCard {
+                VStack(spacing: 14) {
+                    Text(currentSentence.simplified)
+                        .font(.system(size: 44, weight: .semibold, design: .rounded))
+                        .multilineTextAlignment(.center)
+                        .minimumScaleFactor(0.55)
 
-        if let lastRefreshDate {
-            return "Last manual refresh \(lastRefreshDate.formatted(date: .abbreviated, time: .shortened)) · next automatic slot \(next)"
+                    Text(currentSentence.pinyin)
+                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(.secondary)
+
+                    Text(currentSentence.english)
+                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                }
+            }
         }
-
-        return "Next automatic slot \(next)"
+        .buttonStyle(.plain)
+        .frame(maxWidth: .infinity)
     }
 
-    private func playbackButton(action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Label("Hear pronunciation", systemImage: "play.circle.fill")
-                .font(.headline)
+    private func studyCard<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        VStack(spacing: 18) {
+            content()
+
+            HStack(spacing: 8) {
+                Image(systemName: "speaker.wave.2.fill")
+                    .font(.subheadline.weight(.semibold))
+
+                Text("Tap to hear pronunciation")
+                    .font(.subheadline.weight(.medium))
+            }
+            .foregroundStyle(Color.accentColor)
         }
-        .buttonStyle(.borderless)
-        .padding(.top, 8)
+        .padding(.horizontal, 20)
+        .padding(.vertical, 24)
+        .background(.background, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .stroke(Color.accentColor, lineWidth: 2)
+        )
+        .shadow(color: Color.accentColor.opacity(0.08), radius: 12, y: 6)
     }
 
     private func refreshCurrentMode() {
         switch mode {
         case .word:
             currentWord = SharedWordState.advance(words: words)
-            lastWordRefreshDate = SharedWordState.lastRefreshDate()
         case .sentence:
             currentSentence = SharedSentenceState.advance(sentences: sentences)
-            lastSentenceRefreshDate = SharedSentenceState.lastRefreshDate()
         }
     }
 
     private func refreshFromState() {
         currentWord = SharedWordState.currentWord(from: words)
         currentSentence = SharedSentenceState.currentSentence(from: sentences)
-        cadence = SharedWordState.cadence()
-        lastWordRefreshDate = SharedWordState.lastRefreshDate()
-        lastSentenceRefreshDate = SharedSentenceState.lastRefreshDate()
     }
 
     private func handleWidgetURL(_ url: URL) {

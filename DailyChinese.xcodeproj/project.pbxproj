@@ -72,6 +72,7 @@
 		DC000000000000000000010E /* SentenceDataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceDataset.swift; sourceTree = "<group>"; };
 		DC000000000000000000010F /* SharedSentenceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSentenceState.swift; sourceTree = "<group>"; };
 		DC0000000000000000000110 /* sentences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sentences.json; sourceTree = "<group>"; };
+		DC0000000000000000000111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 				DC0000000000000000000101 /* DailyChineseApp.swift */,
 				DC0000000000000000000102 /* ContentView.swift */,
 				DC0000000000000000000106 /* Assets.xcassets */,
+				DC0000000000000000000111 /* Info.plist */,
 				DC000000000000000000010B /* DailyChinese.entitlements */,
 			);
 			path = DailyChinese;
@@ -319,6 +321,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6D7X9GGZAW;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -373,6 +376,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6D7X9GGZAW;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -392,27 +396,22 @@
 		DC0000000000000000000A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyChinese/DailyChinese.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WN29JGHW7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyChinese/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Daily Chinese";
-				INFOPLIST_KEY_CFBundleURLTypes = (
-					{
-						CFBundleURLName = "Daily Chinese";
-						CFBundleURLSchemes = (
-							dailychinese,
-						);
-					},
-				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,27 +429,22 @@
 		DC0000000000000000000A04 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyChinese/DailyChinese.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WN29JGHW7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyChinese/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Daily Chinese";
-				INFOPLIST_KEY_CFBundleURLTypes = (
-					{
-						CFBundleURLName = "Daily Chinese";
-						CFBundleURLSchemes = (
-							dailychinese,
-						);
-					},
-				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +466,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyChineseWidget/DailyChineseWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WN29JGHW7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = DailyChineseWidget/Info.plist;
@@ -500,7 +494,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyChineseWidget/DailyChineseWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WN29JGHW7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = DailyChineseWidget/Info.plist;

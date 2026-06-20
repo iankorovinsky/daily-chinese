@@ -62,5 +62,741 @@
     "pinyin": "wǒ zài jiā kàn shū",
     "english": "I am reading at home.",
     "notes": null
+  },
+  {
+    "id": 9,
+    "simplified": "你叫什么名字？",
+    "traditional": "你叫什麼名字？",
+    "pinyin": "nǐ jiào shén me míng zi",
+    "english": "What is your name?",
+    "notes": null
+  },
+  {
+    "id": 10,
+    "simplified": "我叫安娜。",
+    "traditional": "我叫安娜。",
+    "pinyin": "wǒ jiào ān nà",
+    "english": "My name is Anna.",
+    "notes": null
+  },
+  {
+    "id": 11,
+    "simplified": "很高兴认识你。",
+    "traditional": "很高興認識你。",
+    "pinyin": "hěn gāo xìng rèn shi nǐ",
+    "english": "Nice to meet you.",
+    "notes": null
+  },
+  {
+    "id": 12,
+    "simplified": "你好吗？",
+    "traditional": "你好嗎？",
+    "pinyin": "nǐ hǎo ma",
+    "english": "How are you?",
+    "notes": null
+  },
+  {
+    "id": 13,
+    "simplified": "我很好，谢谢。",
+    "traditional": "我很好，謝謝。",
+    "pinyin": "wǒ hěn hǎo, xiè xie",
+    "english": "I am fine, thank you.",
+    "notes": null
+  },
+  {
+    "id": 14,
+    "simplified": "不客气。",
+    "traditional": "不客氣。",
+    "pinyin": "bú kè qi",
+    "english": "You are welcome.",
+    "notes": null
+  },
+  {
+    "id": 15,
+    "simplified": "对不起。",
+    "traditional": "對不起。",
+    "pinyin": "duì bu qǐ",
+    "english": "Sorry.",
+    "notes": null
+  },
+  {
+    "id": 16,
+    "simplified": "没关系。",
+    "traditional": "沒關係。",
+    "pinyin": "méi guān xi",
+    "english": "It is okay.",
+    "notes": null
+  },
+  {
+    "id": 17,
+    "simplified": "请问，厕所在哪里？",
+    "traditional": "請問，廁所在哪裡？",
+    "pinyin": "qǐng wèn, cè suǒ zài nǎ lǐ",
+    "english": "Excuse me, where is the bathroom?",
+    "notes": null
+  },
+  {
+    "id": 18,
+    "simplified": "这个多少钱？",
+    "traditional": "這個多少錢？",
+    "pinyin": "zhè ge duō shao qián",
+    "english": "How much is this?",
+    "notes": null
+  },
+  {
+    "id": 19,
+    "simplified": "太贵了。",
+    "traditional": "太貴了。",
+    "pinyin": "tài guì le",
+    "english": "It is too expensive.",
+    "notes": null
+  },
+  {
+    "id": 20,
+    "simplified": "便宜一点儿吧。",
+    "traditional": "便宜一點兒吧。",
+    "pinyin": "pián yi yì diǎnr ba",
+    "english": "Can it be a little cheaper?",
+    "notes": null
+  },
+  {
+    "id": 21,
+    "simplified": "我要这个。",
+    "traditional": "我要這個。",
+    "pinyin": "wǒ yào zhè ge",
+    "english": "I want this one.",
+    "notes": null
+  },
+  {
+    "id": 22,
+    "simplified": "我不要那个。",
+    "traditional": "我不要那個。",
+    "pinyin": "wǒ bú yào nà ge",
+    "english": "I do not want that one.",
+    "notes": null
+  },
+  {
+    "id": 23,
+    "simplified": "我喜欢咖啡。",
+    "traditional": "我喜歡咖啡。",
+    "pinyin": "wǒ xǐ huan kā fēi",
+    "english": "I like coffee.",
+    "notes": null
+  },
+  {
+    "id": 24,
+    "simplified": "我不喜欢茶。",
+    "traditional": "我不喜歡茶。",
+    "pinyin": "wǒ bù xǐ huan chá",
+    "english": "I do not like tea.",
+    "notes": null
+  },
+  {
+    "id": 25,
+    "simplified": "我想吃米饭。",
+    "traditional": "我想吃米飯。",
+    "pinyin": "wǒ xiǎng chī mǐ fàn",
+    "english": "I want to eat rice.",
+    "notes": null
+  },
+  {
+    "id": 26,
+    "simplified": "请给我一杯水。",
+    "traditional": "請給我一杯水。",
+    "pinyin": "qǐng gěi wǒ yì bēi shuǐ",
+    "english": "Please give me a glass of water.",
+    "notes": null
+  },
+  {
+    "id": 27,
+    "simplified": "我饿了。",
+    "traditional": "我餓了。",
+    "pinyin": "wǒ è le",
+    "english": "I am hungry.",
+    "notes": null
+  },
+  {
+    "id": 28,
+    "simplified": "我渴了。",
+    "traditional": "我渴了。",
+    "pinyin": "wǒ kě le",
+    "english": "I am thirsty.",
+    "notes": null
+  },
+  {
+    "id": 29,
+    "simplified": "现在几点？",
+    "traditional": "現在幾點？",
+    "pinyin": "xiàn zài jǐ diǎn",
+    "english": "What time is it now?",
+    "notes": null
+  },
+  {
+    "id": 30,
+    "simplified": "现在三点。",
+    "traditional": "現在三點。",
+    "pinyin": "xiàn zài sān diǎn",
+    "english": "It is three o'clock now.",
+    "notes": null
+  },
+  {
+    "id": 31,
+    "simplified": "今天星期几？",
+    "traditional": "今天星期幾？",
+    "pinyin": "jīn tiān xīng qī jǐ",
+    "english": "What day is today?",
+    "notes": null
+  },
+  {
+    "id": 32,
+    "simplified": "今天星期五。",
+    "traditional": "今天星期五。",
+    "pinyin": "jīn tiān xīng qī wǔ",
+    "english": "Today is Friday.",
+    "notes": null
+  },
+  {
+    "id": 33,
+    "simplified": "明天我去学校。",
+    "traditional": "明天我去學校。",
+    "pinyin": "míng tiān wǒ qù xué xiào",
+    "english": "I am going to school tomorrow.",
+    "notes": null
+  },
+  {
+    "id": 34,
+    "simplified": "昨天我很忙。",
+    "traditional": "昨天我很忙。",
+    "pinyin": "zuó tiān wǒ hěn máng",
+    "english": "I was very busy yesterday.",
+    "notes": null
+  },
+  {
+    "id": 35,
+    "simplified": "我住在北京。",
+    "traditional": "我住在北京。",
+    "pinyin": "wǒ zhù zài běi jīng",
+    "english": "I live in Beijing.",
+    "notes": null
+  },
+  {
+    "id": 36,
+    "simplified": "他在上海工作。",
+    "traditional": "他在上海工作。",
+    "pinyin": "tā zài shàng hǎi gōng zuò",
+    "english": "He works in Shanghai.",
+    "notes": null
+  },
+  {
+    "id": 37,
+    "simplified": "我是学生。",
+    "traditional": "我是學生。",
+    "pinyin": "wǒ shì xué sheng",
+    "english": "I am a student.",
+    "notes": null
+  },
+  {
+    "id": 38,
+    "simplified": "她是老师。",
+    "traditional": "她是老師。",
+    "pinyin": "tā shì lǎo shī",
+    "english": "She is a teacher.",
+    "notes": null
+  },
+  {
+    "id": 39,
+    "simplified": "这是我的朋友。",
+    "traditional": "這是我的朋友。",
+    "pinyin": "zhè shì wǒ de péng you",
+    "english": "This is my friend.",
+    "notes": null
+  },
+  {
+    "id": 40,
+    "simplified": "那是我的家。",
+    "traditional": "那是我的家。",
+    "pinyin": "nà shì wǒ de jiā",
+    "english": "That is my home.",
+    "notes": null
+  },
+  {
+    "id": 41,
+    "simplified": "我家有四个人。",
+    "traditional": "我家有四個人。",
+    "pinyin": "wǒ jiā yǒu sì ge rén",
+    "english": "There are four people in my family.",
+    "notes": null
+  },
+  {
+    "id": 42,
+    "simplified": "我有一个哥哥。",
+    "traditional": "我有一個哥哥。",
+    "pinyin": "wǒ yǒu yí ge gē ge",
+    "english": "I have an older brother.",
+    "notes": null
+  },
+  {
+    "id": 43,
+    "simplified": "我没有妹妹。",
+    "traditional": "我沒有妹妹。",
+    "pinyin": "wǒ méi yǒu mèi mei",
+    "english": "I do not have a younger sister.",
+    "notes": null
+  },
+  {
+    "id": 44,
+    "simplified": "你家在哪里？",
+    "traditional": "你家在哪裡？",
+    "pinyin": "nǐ jiā zài nǎ lǐ",
+    "english": "Where is your home?",
+    "notes": null
+  },
+  {
+    "id": 45,
+    "simplified": "学校离这里很近。",
+    "traditional": "學校離這裡很近。",
+    "pinyin": "xué xiào lí zhè lǐ hěn jìn",
+    "english": "The school is very near here.",
+    "notes": null
+  },
+  {
+    "id": 46,
+    "simplified": "医院在左边。",
+    "traditional": "醫院在左邊。",
+    "pinyin": "yī yuàn zài zuǒ biān",
+    "english": "The hospital is on the left.",
+    "notes": null
+  },
+  {
+    "id": 47,
+    "simplified": "银行在右边。",
+    "traditional": "銀行在右邊。",
+    "pinyin": "yín háng zài yòu biān",
+    "english": "The bank is on the right.",
+    "notes": null
+  },
+  {
+    "id": 48,
+    "simplified": "请一直往前走。",
+    "traditional": "請一直往前走。",
+    "pinyin": "qǐng yì zhí wǎng qián zǒu",
+    "english": "Please walk straight ahead.",
+    "notes": null
+  },
+  {
+    "id": 49,
+    "simplified": "然后向左拐。",
+    "traditional": "然後向左拐。",
+    "pinyin": "rán hòu xiàng zuǒ guǎi",
+    "english": "Then turn left.",
+    "notes": null
+  },
+  {
+    "id": 50,
+    "simplified": "地铁站在前面。",
+    "traditional": "地鐵站在前面。",
+    "pinyin": "dì tiě zhàn zài qián miàn",
+    "english": "The subway station is ahead.",
+    "notes": null
+  },
+  {
+    "id": 51,
+    "simplified": "我坐公共汽车去上班。",
+    "traditional": "我坐公共汽車去上班。",
+    "pinyin": "wǒ zuò gōng gòng qì chē qù shàng bān",
+    "english": "I take the bus to work.",
+    "notes": null
+  },
+  {
+    "id": 52,
+    "simplified": "他开车去学校。",
+    "traditional": "他開車去學校。",
+    "pinyin": "tā kāi chē qù xué xiào",
+    "english": "He drives to school.",
+    "notes": null
+  },
+  {
+    "id": 53,
+    "simplified": "今天很热。",
+    "traditional": "今天很熱。",
+    "pinyin": "jīn tiān hěn rè",
+    "english": "It is hot today.",
+    "notes": null
+  },
+  {
+    "id": 54,
+    "simplified": "今天很冷。",
+    "traditional": "今天很冷。",
+    "pinyin": "jīn tiān hěn lěng",
+    "english": "It is cold today.",
+    "notes": null
+  },
+  {
+    "id": 55,
+    "simplified": "外面下雨了。",
+    "traditional": "外面下雨了。",
+    "pinyin": "wài miàn xià yǔ le",
+    "english": "It is raining outside.",
+    "notes": null
+  },
+  {
+    "id": 56,
+    "simplified": "今天有风。",
+    "traditional": "今天有風。",
+    "pinyin": "jīn tiān yǒu fēng",
+    "english": "It is windy today.",
+    "notes": null
+  },
+  {
+    "id": 57,
+    "simplified": "我喜欢春天。",
+    "traditional": "我喜歡春天。",
+    "pinyin": "wǒ xǐ huan chūn tiān",
+    "english": "I like spring.",
+    "notes": null
+  },
+  {
+    "id": 58,
+    "simplified": "冬天很冷。",
+    "traditional": "冬天很冷。",
+    "pinyin": "dōng tiān hěn lěng",
+    "english": "Winter is very cold.",
+    "notes": null
+  },
+  {
+    "id": 59,
+    "simplified": "我在学中文。",
+    "traditional": "我在學中文。",
+    "pinyin": "wǒ zài xué zhōng wén",
+    "english": "I am studying Chinese.",
+    "notes": null
+  },
+  {
+    "id": 60,
+    "simplified": "中文很有意思。",
+    "traditional": "中文很有意思。",
+    "pinyin": "zhōng wén hěn yǒu yì si",
+    "english": "Chinese is very interesting.",
+    "notes": null
+  },
+  {
+    "id": 61,
+    "simplified": "这个字怎么读？",
+    "traditional": "這個字怎麼讀？",
+    "pinyin": "zhè ge zì zěn me dú",
+    "english": "How do you read this character?",
+    "notes": null
+  },
+  {
+    "id": 62,
+    "simplified": "这个词是什么意思？",
+    "traditional": "這個詞是什麼意思？",
+    "pinyin": "zhè ge cí shì shén me yì si",
+    "english": "What does this word mean?",
+    "notes": null
+  },
+  {
+    "id": 63,
+    "simplified": "请帮我写下来。",
+    "traditional": "請幫我寫下來。",
+    "pinyin": "qǐng bāng wǒ xiě xià lái",
+    "english": "Please write it down for me.",
+    "notes": null
+  },
+  {
+    "id": 64,
+    "simplified": "我听得懂一点儿。",
+    "traditional": "我聽得懂一點兒。",
+    "pinyin": "wǒ tīng de dǒng yì diǎnr",
+    "english": "I can understand a little.",
+    "notes": null
+  },
+  {
+    "id": 65,
+    "simplified": "我不会写汉字。",
+    "traditional": "我不會寫漢字。",
+    "pinyin": "wǒ bú huì xiě hàn zì",
+    "english": "I cannot write Chinese characters.",
+    "notes": null
+  },
+  {
+    "id": 66,
+    "simplified": "请说慢一点儿。",
+    "traditional": "請說慢一點兒。",
+    "pinyin": "qǐng shuō màn yì diǎnr",
+    "english": "Please speak a little more slowly.",
+    "notes": null
+  },
+  {
+    "id": 67,
+    "simplified": "我可以试试吗？",
+    "traditional": "我可以試試嗎？",
+    "pinyin": "wǒ kě yǐ shì shi ma",
+    "english": "May I try?",
+    "notes": null
+  },
+  {
+    "id": 68,
+    "simplified": "当然可以。",
+    "traditional": "當然可以。",
+    "pinyin": "dāng rán kě yǐ",
+    "english": "Of course you can.",
+    "notes": null
+  },
+  {
+    "id": 69,
+    "simplified": "我有一个问题。",
+    "traditional": "我有一個問題。",
+    "pinyin": "wǒ yǒu yí ge wèn tí",
+    "english": "I have a question.",
+    "notes": null
+  },
+  {
+    "id": 70,
+    "simplified": "这很容易。",
+    "traditional": "這很容易。",
+    "pinyin": "zhè hěn róng yì",
+    "english": "This is very easy.",
+    "notes": null
+  },
+  {
+    "id": 71,
+    "simplified": "这有一点儿难。",
+    "traditional": "這有一點兒難。",
+    "pinyin": "zhè yǒu yì diǎnr nán",
+    "english": "This is a little difficult.",
+    "notes": null
+  },
+  {
+    "id": 72,
+    "simplified": "我今天很开心。",
+    "traditional": "我今天很開心。",
+    "pinyin": "wǒ jīn tiān hěn kāi xīn",
+    "english": "I am very happy today.",
+    "notes": null
+  },
+  {
+    "id": 73,
+    "simplified": "他昨天很累。",
+    "traditional": "他昨天很累。",
+    "pinyin": "tā zuó tiān hěn lèi",
+    "english": "He was very tired yesterday.",
+    "notes": null
+  },
+  {
+    "id": 74,
+    "simplified": "我现在很忙。",
+    "traditional": "我現在很忙。",
+    "pinyin": "wǒ xiàn zài hěn máng",
+    "english": "I am very busy now.",
+    "notes": null
+  },
+  {
+    "id": 75,
+    "simplified": "请等一下。",
+    "traditional": "請等一下。",
+    "pinyin": "qǐng děng yí xià",
+    "english": "Please wait a moment.",
+    "notes": null
+  },
+  {
+    "id": 76,
+    "simplified": "我马上回来。",
+    "traditional": "我馬上回來。",
+    "pinyin": "wǒ mǎ shàng huí lái",
+    "english": "I will be right back.",
+    "notes": null
+  },
+  {
+    "id": 77,
+    "simplified": "我找不到我的手机。",
+    "traditional": "我找不到我的手機。",
+    "pinyin": "wǒ zhǎo bú dào wǒ de shǒu jī",
+    "english": "I cannot find my phone.",
+    "notes": null
+  },
+  {
+    "id": 78,
+    "simplified": "我的电脑坏了。",
+    "traditional": "我的電腦壞了。",
+    "pinyin": "wǒ de diàn nǎo huài le",
+    "english": "My computer is broken.",
+    "notes": null
+  },
+  {
+    "id": 79,
+    "simplified": "请给我你的电话号码。",
+    "traditional": "請給我你的電話號碼。",
+    "pinyin": "qǐng gěi wǒ nǐ de diàn huà hào mǎ",
+    "english": "Please give me your phone number.",
+    "notes": null
+  },
+  {
+    "id": 80,
+    "simplified": "我的手机没电了。",
+    "traditional": "我的手機沒電了。",
+    "pinyin": "wǒ de shǒu jī méi diàn le",
+    "english": "My phone is out of battery.",
+    "notes": null
+  },
+  {
+    "id": 81,
+    "simplified": "我们一起去吧。",
+    "traditional": "我們一起去吧。",
+    "pinyin": "wǒ men yì qǐ qù ba",
+    "english": "Let us go together.",
+    "notes": null
+  },
+  {
+    "id": 82,
+    "simplified": "你要跟我来吗？",
+    "traditional": "你要跟我來嗎？",
+    "pinyin": "nǐ yào gēn wǒ lái ma",
+    "english": "Do you want to come with me?",
+    "notes": null
+  },
+  {
+    "id": 83,
+    "simplified": "我先走了。",
+    "traditional": "我先走了。",
+    "pinyin": "wǒ xiān zǒu le",
+    "english": "I will head out first.",
+    "notes": null
+  },
+  {
+    "id": 84,
+    "simplified": "明天见。",
+    "traditional": "明天見。",
+    "pinyin": "míng tiān jiàn",
+    "english": "See you tomorrow.",
+    "notes": null
+  },
+  {
+    "id": 85,
+    "simplified": "晚安。",
+    "traditional": "晚安。",
+    "pinyin": "wǎn ān",
+    "english": "Good night.",
+    "notes": null
+  },
+  {
+    "id": 86,
+    "simplified": "早上好。",
+    "traditional": "早上好。",
+    "pinyin": "zǎo shang hǎo",
+    "english": "Good morning.",
+    "notes": null
+  },
+  {
+    "id": 87,
+    "simplified": "晚上好。",
+    "traditional": "晚上好。",
+    "pinyin": "wǎn shang hǎo",
+    "english": "Good evening.",
+    "notes": null
+  },
+  {
+    "id": 88,
+    "simplified": "祝你生日快乐。",
+    "traditional": "祝你生日快樂。",
+    "pinyin": "zhù nǐ shēng rì kuài lè",
+    "english": "Happy birthday to you.",
+    "notes": null
+  },
+  {
+    "id": 89,
+    "simplified": "新年快乐。",
+    "traditional": "新年快樂。",
+    "pinyin": "xīn nián kuài lè",
+    "english": "Happy New Year.",
+    "notes": null
+  },
+  {
+    "id": 90,
+    "simplified": "祝你好运。",
+    "traditional": "祝你好運。",
+    "pinyin": "zhù nǐ hǎo yùn",
+    "english": "Good luck to you.",
+    "notes": null
+  },
+  {
+    "id": 91,
+    "simplified": "我需要帮助。",
+    "traditional": "我需要幫助。",
+    "pinyin": "wǒ xū yào bāng zhù",
+    "english": "I need help.",
+    "notes": null
+  },
+  {
+    "id": 92,
+    "simplified": "请帮帮我。",
+    "traditional": "請幫幫我。",
+    "pinyin": "qǐng bāng bāng wǒ",
+    "english": "Please help me.",
+    "notes": null
+  },
+  {
+    "id": 93,
+    "simplified": "我迷路了。",
+    "traditional": "我迷路了。",
+    "pinyin": "wǒ mí lù le",
+    "english": "I am lost.",
+    "notes": null
+  },
+  {
+    "id": 94,
+    "simplified": "请叫医生。",
+    "traditional": "請叫醫生。",
+    "pinyin": "qǐng jiào yī shēng",
+    "english": "Please call a doctor.",
+    "notes": null
+  },
+  {
+    "id": 95,
+    "simplified": "我头疼。",
+    "traditional": "我頭疼。",
+    "pinyin": "wǒ tóu téng",
+    "english": "I have a headache.",
+    "notes": null
+  },
+  {
+    "id": 96,
+    "simplified": "我想休息一下。",
+    "traditional": "我想休息一下。",
+    "pinyin": "wǒ xiǎng xiū xi yí xià",
+    "english": "I want to rest a bit.",
+    "notes": null
+  },
+  {
+    "id": 97,
+    "simplified": "你有时间吗？",
+    "traditional": "你有時間嗎？",
+    "pinyin": "nǐ yǒu shí jiān ma",
+    "english": "Do you have time?",
+    "notes": null
+  },
+  {
+    "id": 98,
+    "simplified": "我今天没有时间。",
+    "traditional": "我今天沒有時間。",
+    "pinyin": "wǒ jīn tiān méi yǒu shí jiān",
+    "english": "I do not have time today.",
+    "notes": null
+  },
+  {
+    "id": 99,
+    "simplified": "周末你想做什么？",
+    "traditional": "週末你想做什麼？",
+    "pinyin": "zhōu mò nǐ xiǎng zuò shén me",
+    "english": "What do you want to do this weekend?",
+    "notes": null
+  },
+  {
+    "id": 100,
+    "simplified": "我想看电影。",
+    "traditional": "我想看電影。",
+    "pinyin": "wǒ xiǎng kàn diàn yǐng",
+    "english": "I want to watch a movie.",
+    "notes": null
   }
 ]
