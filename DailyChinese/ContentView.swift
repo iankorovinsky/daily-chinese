@@ -157,11 +157,24 @@ struct ContentView: View {
     }
 
     private func handleWidgetURL(_ url: URL) {
+        let tappedID = Int(url.lastPathComponent)
+
         if url.host == "sentence" {
             mode = .sentence
+            if let tappedID, let sentence = sentences.first(where: { $0.id == tappedID }) {
+                currentSentence = sentence
+                speak(sentence.simplified)
+                return
+            }
         } else {
             mode = .word
+            if let tappedID, let word = words.first(where: { $0.id == tappedID }) {
+                currentWord = word
+                speak(word.displayCharacter)
+                return
+            }
         }
+
         refreshFromState()
     }
 

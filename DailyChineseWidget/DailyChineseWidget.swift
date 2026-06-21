@@ -109,33 +109,60 @@ struct SentenceProvider: TimelineProvider {
 struct WordWidgetView: View {
     let entry: WordEntry
     @Environment(\.widgetFamily) private var family
-
+    
     var body: some View {
-        VStack(spacing: family == .systemSmall ? 8 : 16) {
-            Spacer(minLength: 0)
-
-            Text(entry.word.displayCharacter)
-                .font(.system(size: family == .systemSmall ? 68 : 132, weight: .semibold, design: .rounded))
-                .minimumScaleFactor(0.45)
-                .lineLimit(1)
-
-            VStack(spacing: 4) {
-                Text(entry.word.pinyin)
-                    .font(family == .systemSmall ? .subheadline : .title2)
-                    .foregroundStyle(.secondary)
+        Group {
+            switch family {
+            case .accessoryInline:
+                Text("\(entry.word.displayCharacter) \(entry.word.pinyin)")
                     .lineLimit(1)
+            case .accessoryCircular:
+                Text(entry.word.displayCharacter)
+                    .font(.system(size: 28, weight: .semibold, design: .rounded))
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+            case .accessoryRectangular:
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(entry.word.displayCharacter)
+                        .font(.headline.weight(.semibold))
+                        .lineLimit(1)
+                    Text(entry.word.pinyin)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                    Text(entry.word.english)
+                        .font(.caption2)
+                        .lineLimit(1)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            default:
+                VStack(spacing: family == .systemSmall ? 8 : 16) {
+                    Spacer(minLength: 0)
 
-                Text(entry.word.english)
-                    .font(family == .systemSmall ? .caption : .title3)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(family == .systemSmall ? 2 : 3)
-                    .minimumScaleFactor(0.75)
+                    Text(entry.word.displayCharacter)
+                        .font(.system(size: family == .systemSmall ? 68 : 132, weight: .semibold, design: .rounded))
+                        .minimumScaleFactor(0.45)
+                        .lineLimit(1)
+
+                    VStack(spacing: 4) {
+                        Text(entry.word.pinyin)
+                            .font(family == .systemSmall ? .subheadline : .title2)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+
+                        Text(entry.word.english)
+                            .font(family == .systemSmall ? .caption : .title3)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(family == .systemSmall ? 2 : 3)
+                            .minimumScaleFactor(0.75)
+                    }
+
+                    Spacer(minLength: 0)
+                }
+                .padding(family == .systemSmall ? 14 : 28)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-
-            Spacer(minLength: 0)
         }
-        .padding(family == .systemSmall ? 14 : 28)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .containerBackground(.background, for: .widget)
         .widgetURL(URL(string: "dailychinese://word/\(entry.word.id)"))
     }
@@ -143,10 +170,18 @@ struct WordWidgetView: View {
 
 struct SentenceWidgetView: View {
     let entry: SentenceEntry
+    @Environment(\.widgetFamily) private var family
 
     var body: some View {
-        mediumSentenceLayout
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        Group {
+            switch family {
+            case .accessoryRectangular:
+                accessorySentenceLayout
+            default:
+                mediumSentenceLayout
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+        }
         .containerBackground(.background, for: .widget)
         .widgetURL(URL(string: "dailychinese://sentence/\(entry.sentence.id)"))
     }
@@ -176,6 +211,27 @@ struct SentenceWidgetView: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 14)
     }
+
+    private var accessorySentenceLayout: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(entry.sentence.simplified)
+                .font(.headline.weight(.semibold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
+
+            Text(entry.sentence.pinyin)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+
+            Text(entry.sentence.english)
+                .font(.caption2)
+                .lineLimit(1)
+                .minimumScaleFactor(0.65)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+    }
 }
 
 struct DailyChineseWordWidget: Widget {
@@ -187,7 +243,7 @@ struct DailyChineseWordWidget: Widget {
         }
         .configurationDisplayName("Chinese Word")
         .description("A refreshed Chinese word.")
-        .supportedFamilies([.systemSmall, .systemLarge])
+        .supportedFamilies([.systemSmall, .systemLarge, .accessoryInline, .accessoryCircular, .accessoryRectangular])
     }
 }
 
@@ -200,7 +256,7 @@ struct DailyChineseSentenceWidget: Widget {
         }
         .configurationDisplayName("Chinese Sentence")
         .description("A refreshed Chinese sentence.")
-        .supportedFamilies([.systemMedium])
+        .supportedFamilies([.systemMedium, .accessoryRectangular])
     }
 }
 
